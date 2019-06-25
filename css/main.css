@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #3e80c1;
+}
+
+#home {
+	color: #fff;
+	display:block;
+}
+
+#mainBody {
+	color: #fff;
+	display:none;
+}
+
+#deckBuild {
+	color: #fff;
+	display:none;
+}
+
+#sideWindow {
+	margin: 0;
+	background-color: #86dc75;
+	color: #456547;
+	display:none;
+	z-index: 100;
+	border-style: solid;
+}
+
+#nav {
+  list-style: none;
+  display: flex;
+  background-color: #555;
+  padding: 0 37.5px  0 37.5px;
+  margin-top: 0;
+}
+ 
+#nav li {
+  width: 90px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #5b6d71;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 5px 0 5px;
+}
+ 
+#nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0px;
+}
+
+#header{
+  color: #838383;
+  text-align: left;
+  font-size: 20px;
+  background-color: #333;
+  height: 30px;
+}
+
+#field {
+  text-align: center;
+}
+
+.fieldBox{
+  	width: 58px;
+    height: 83px;
+    padding: 0;
+    margin: 2px auto;
+    border-style: dashed;
+    border-radius: 3px;
+    color: #FFFFFF;
+    background-color: #81bbe3;
+    font-size: 13px;
+}
+
+.sideBox{
+  	margin: 2px auto;
+  	width: 58px;
+    height: 83px;
+  	font-size: 13px;
+  	font-weight: bold;
+  	border-style: solid;
+  	border-radius: 3px;	
+  	color: #a3e0ff;
+  	background-color: #1e408c;
+}
+
+#bench {
+  display: flex;
+  text-align: center;
+  margint: auto;
+}
+
+#hand {
+  height: 100px;
+  background-color: #2a4e7c; 
+  overflow-y: scroll;
+}
+
+#hand p{
+  width: 58px;
+  height: 83px;
+  margin: 2px;
+  display: flex;
+}
+
+#outOfField {
+
+}
+
+#trash {
+  height: 300px;
+  text-align: center;
+  background-color: #f57e86;
+  align-content: center;
+  width: auto;
+}
+
+#deck {
+  height: 130px;
+  text-align: center;
+  background-color: #cbf593;
+  align-content: center;
+  width: auto;
+}
+
+#lost {
+  height: 300px;
+  text-align: center;
+  background-color: #a392f5;
+  align-content: center;
+  width: auto;
+}
+
+#showDeck {
+  display: flex;
+}
+
+#showDeckButton {
+  margin: 0;
+  width: 57px;
+  height: 82px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  border-style: solid;
+  border-radius: 3px;
+  color: #eeebc7;
+  background-color: #8a7f40;
+}
+
+#showCardsArea {
+  margin: auto;
+  width: 300px;
+  height: 82px;
+  text-align: center;
+  font-size: 10px;
+  border-style: dashed;
+  border-radius: 3px;
+  color: #eeebc7;
+  background-color: #bfc476;
+}
+
+#setting {
+  height: 210px;
+  text-align: center;
+  background-color: #c1c1c1;
+  align-content: center;
+  width: auto;
+}
+
+.settingButton {
+  background-color: #737373;
+  width: 150px;
+  margin: 10px auto 10px auto;
+}
+
+.settingButtonFull {
+  width: 320px;
+  margin: 0 auto 10px auto;
+}
+
+#putCardBottomButton {
+  background-color: #6f332d;
+}
+
+#putCardTopButton {
+  background-color: #5784c5;
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  background-color: #555;
+  padding: 0 37.5px  0 37.5px;
+  margin: 0;
+}
+ 
+#menu li {
+  width: 90px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #5b6d71;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 5px 0 5px;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0px;
+}
+
+#deckMenu {
+  margin: 0;
+  height: 88px;
+  list-style: none;
+  display: flex;
+  background-color: #2b5d90;
+}
+ 
+#drawButton {
+  margin: 0;
+  width: 57px;
+  height: 82px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  border-style: solid;
+  border-radius: 3px;
+  color: #9ea64e;
+  background-color: #1e408c;
+}
+
+#drawedCard {
+  margin: 0;
+  width: 57px;
+  height: 82px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  border-style: dashed;
+  border-radius: 3px;
+  color: #73b0bb;
+  background-color: #558fa8;
+}
+
+#returnToDeckBottom {
+  margin: 0 0 0 73px;
+  width: 82px;
+  height: 82px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  border-style: dashed;
+  border-radius: 3px;
+  color: #ffebeb;
+  background-color: #c99da3;
+}
+
+#returnToDeckTop {
+  margin: 0 0 0 auto;
+  width: 82px;
+  height: 82px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  border-style: dashed;
+  border-radius: 3px;
+  color: #cde1ff;
+  background-color: #558fa8;
+}
+
+.cardUrl{
+  color: #fff;
+}
+
+#deckData{
+  font-size: 10px;
+  width: 350px;
+  height: 160px
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=375, user-scalable=no"/>
+    <title>ポケカ1人回しツール</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'></script>
+    <script src="js/deck.js"></script>
+    <script src="js/deckBuild.js"></script>
+    <script src="js/cardMove.js"></script>
+    <script src="js/main.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+	<div id="header">
+    	<b>ポケカ1人回しツール</b>
+	</div>
+	
+  	<ul id="nav">
+  		<li id="homeButton"><a>ホーム</a></li>
+  		<li id="mainBodyButton"><a>フィールド</a></li>
+  		<li id="kouchikuButton"><a>構築</a></li>
+	</ul>
+	<!--------------------- ホーム --------------------->	
+	<div id="home">
+		<p><font size=2>推奨端末: iPhone(6以降)</font></p>
+		<p><font size=2>Androidは画面広い機種だったらいけるかな</font></p>
+		<p><font size=2>6以前、SEは画面が小さいので正常に画面表示されないかも</font></p>
+		<p><b>・ご要望(6/26更新)</b></p>
+		<p><font size=3><b>「サイド当てゲームしたい！サイドが見たい！？」</b></font></p>
+		<p><font size=2>-javascript初心者に要望投げるのは酷(できました)</font></p>
+		<p><font size=3><b>「カードを下に並べても何のカードを重ねたのかわかりません」</b></font></p>
+		<p><font size=2>-うるせえ！！上向きに並ぶようにしたらいいんだろぉ！？(しました)</font></p>
+		<p><b>・いろいろ</b></p>
+		<p><font size=2>カードをまとめて移動できないのは仕様です、対策を検討中...</font></p>
+		<p><font size=2>1人で作ったのでデバッグ作業が間に合ってません、不具合があったら報告お願いします。</font></p>
+		<p><font size=1>*本サービスは営利を目的としておりません。原則として権利者様からの指示があった場合、直ちにそれに従います。</font></p>
+	</div>
+	<!--------------------- ホームここまで --------------------->
+	
+	<!--------------------- フィールド --------------------->	
+	<div id="mainBody">	
+		<div id="sideWindow"></div>
+		<br>
+		<br>
+		<div id="field" class="ui-widget-content">
+			<div id=bench>
+				<div id="stadium" class="fieldBox"></div>
+				<div id="free1"   class="fieldBox"></div>
+				<div id="battle"  class="fieldBox"></div>
+				<div id="free2"   class="fieldBox"></div>
+				<div id="side"    class="sideBox"><p>side</p><p id=numOfSide>-</p></div>
+			</div>	
+			<br><br><br>
+			<div id=bench>
+				<div id="bench1" class="fieldBox"></div>
+				<div id="bench2" class="fieldBox"></div>
+				<div id="bench3" class="fieldBox"></div>
+				<div id="bench4" class="fieldBox"></div>
+				<div id="bench5" class="fieldBox"></div>
+			</div>
+		</div>
+		<br style="line-height: 10px;">
+		<div id="hand" class="ui-widget-content"></div>
+	
+		<div id="deckMenu" class="ui-widget-content">
+			<div id="drawButton"><a>ドロー</a></div>
+			<div id="drawedCard"></div>
+			<!-- <div id="sendToTrash">トラッシュする</div> -->
+			<div id="returnToDeckBottom">デッキの下に戻す</div>
+			<div id="returnToDeckTop">デッキの上に戻す</div>
+		</div>
+	
+		<ul id="menu">
+  			<li id="trashButton"><a>トラッシュ</a></li>
+  			<li id="deckButton"><a>デッキ</a></li>
+  			<li id="lostButton"><a>ロスト</a></li>
+  			<li id="settingButton"><a>メニュー</a></li>
+		</ul>
+	
+		<div id="outOfField">
+			<div id="trash"></div>
+			<div id="deck">
+				<b><font size=1 color=black>※本当はもっと便利なの作ったけど色々まずかったからソリティア形式にした</font></b>
+				<div id="showDeck">
+					<div id="showDeckButton">次のページ</div>
+					<div id="showCardsArea"></div>
+				</div>
+			</div>
+			<div id="lost"></div>
+			<div id="setting">
+				<b><font size=1 color=black>各種カードの重ね方はこのボタンで切り替えると便利かも</font></b>
+				<div style="display: flex;">
+					<div id="putCardBottomButton" class="settingButton"><a>下に重ねる(デフォ)</a></div>
+					<div id="putCardTopButton" class="settingButton"><a>上に重ねる</a></div>
+				</div>
+				<div style="display: flex;">
+					<div id="coinTossButton" class="settingButton"><a>コイントス</a></div>
+					<div id="diceButton" class="settingButton"><a>サイコロ</a></div>
+				</div>
+				<div style="display: flex;">
+					<div id="shuffleButton" class="settingButton"><a>シャッフル</a></div>	
+					<div id="resetButton" class="settingButton"><a>リセット/新規対戦</a></div>
+				</div>
+				<div style="display: flex;">
+					<div id="getSideInformation" class="settingButton"><a>サイドを見る</a></div>
+					<div id="drawBottomButton" class="settingButton"><a>デッキ下からドロー</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--------------------- フィールドここまで --------------------->
+	
+	<!----------------------- デッキ作成フォーム ----------------------->
+	<div id="deckBuild">
+		<div id="deckList">
+			<li class="cardUrl">
+    			<b>画像URL:</b>
+    			<input type="text" class="deckCodeText" size="15">
+    			<b>枚数:</b>
+				<input type="text" class="cardNums" size="2">
+			</li>
+		</div>
+	
+		<div>
+			<input type="submit" id="addCardButton" value="+カードの追加">
+			<input type="submit" id="buildDeckButton" value="デッキデータ生成">
+		</div>
+		<br>
+		<b>•デッキデータ</b>
+		<form>
+			<textarea id="deckData" rows="5" cols="60" wrap="hard"></textarea>
+		</form>
+		<input type="submit" id="setDeckButton" value="デッキ設定">
+		<input type="submit" id="copyTextButton" value="デッキデータをコピー">
+		
+		<p><b>•デッキ一覧</b></p>
+		<p><font size=1>※画像が表示されてないカードがあったら画像URLのミスかも</font></p>
+		<div id="deckListImages"></div>
+	</div>
+	<!------------------- デッキ作成フォームここまで --------------------->
+  </body>
+</html>
