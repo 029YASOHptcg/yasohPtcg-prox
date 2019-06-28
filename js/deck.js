@@ -22,6 +22,8 @@ function osouji(){
 		  deck.push($(element).find("img").attr("src"));
 	});
 	$('#showCardsArea').empty();
+	let deckNum = deck.length;
+	$('#numOfDeck').html(deckNum);
 }
 
 function osouji2(){
@@ -88,6 +90,8 @@ function reset(){
   	    	obj.top = $('#hand').offset().top+6;//ここまで細かく気遣ってるのよ！！
   	      $(element).offset(obj);
     	});
+	let deckNum = deck.length;
+	$('#numOfDeck').html(deckNum);
 	$('#hand p').draggable({revert: "invalid"});
 	
 	//お知らせもしてあげる、えらい！！
@@ -107,7 +111,9 @@ $(function(){
   	  			obj.left = $('#drawedCard').offset().left + ($('#drawedCard p').length-1)*20;	
   	  			obj.top = $('#drawedCard').offset().top;
   	  			$srcObj.offset(obj);
-  	  			$('#drawedCard p').draggable({revert: "invalid"});
+			let deckNum = deck.length;
+			$('#numOfDeck').html(deckNum);
+  	  		$('#drawedCard p').draggable({revert: "invalid"});
 	  	}else{
 	  		window.alert('デッキが0枚です');
 	  	}
@@ -121,7 +127,9 @@ $(function(){
 	  			obj.left = $('#drawedCard').offset().left + ($('#drawedCard p').length-1)*20;	
 	  			obj.top = $('#drawedCard').offset().top;
 	  			$srcObj.offset(obj);
-	  			$('#drawedCard p').draggable({revert: "invalid"});
+			let deckNum = deck.length;
+			$('#numOfDeck').html(deckNum);
+	  		$('#drawedCard p').draggable({revert: "invalid"});
 	  	}else{
 	  		window.alert('デッキが0枚です');
 	  	}
@@ -142,6 +150,8 @@ $(function(){
     	  $(ui.draggable).appendTo('#returnToDeckTop');
     	  deck.unshift(ui.draggable.find("img").attr("src"));
     	  $('#returnToDeckTop p').remove();
+	  let deckNum = deck.length;
+	  $('#numOfDeck').html(deckNum);
       }
   });
   
@@ -160,6 +170,8 @@ $(function(){
     	  $(ui.draggable).appendTo('#returnToDeckBottom');
     	  deck.push(ui.draggable.find("img").attr("src"));
     	  $('#returnToDeckBottom p').remove();
+	  let deckNum = deck.length;
+	  $('#numOfDeck').html(deckNum);
       }
   });
   
