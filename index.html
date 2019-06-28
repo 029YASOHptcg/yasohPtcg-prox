@@ -43,10 +43,8 @@
 	
 	<!--------------------- フィールド --------------------->	
 	<div id="mainBody">	
-		<div id="sideWindow"></div>
-		<br>
-		<br>
 		<div id="field" class="ui-widget-content">
+		<br><br>
 			<div id=bench>
 				<div id="stadium" class="fieldBox"></div>
 				<div id="free1"   class="fieldBox"></div>
@@ -54,7 +52,7 @@
 				<div id="free2"   class="fieldBox"></div>
 				<div id="side"    class="sideBox"><p>side</p><p id=numOfSide>-</p></div>
 			</div>	
-			<br><br><br>
+			<br><br>
 			<div id=bench>
 				<div id="bench1" class="fieldBox"></div>
 				<div id="bench2" class="fieldBox"></div>
@@ -62,8 +60,8 @@
 				<div id="bench4" class="fieldBox"></div>
 				<div id="bench5" class="fieldBox"></div>
 			</div>
-		</div>
 		<br style="line-height: 10px;">
+		</div>
 		<div id="hand" class="ui-widget-content"></div>
 	
 		<div id="deckMenu" class="ui-widget-content">
@@ -78,6 +76,7 @@
   			<li id="trashButton"><a>トラッシュ</a></li>
   			<li id="deckButton"><a>デッキ</a></li>
   			<li id="lostButton"><a>ロスト</a></li>
+  			<li id="sideButton"><a>サイド</a></li>
   			<li id="settingButton"><a>メニュー</a></li>
 		</ul>
 	
@@ -91,6 +90,13 @@
 				</div>
 			</div>
 			<div id="lost"></div>
+			<div id="sideCards">
+				<b><font size=1 color=black>※ここを閉じるまではサイドの情報が更新されません</font></b>
+				<div id="showSide">
+					<div id="showSideButton">サイド見る</div>
+					<div id="showSideArea"></div>
+				</div>
+			</div>
 			<div id="setting">
 				<div style="display: flex;">
 					<div id="putCardBottomButton" class="settingButton"><a>下に重ねる(デフォ)</a></div>
@@ -105,7 +111,7 @@
 					<div id="resetButton" class="settingButton"><a>リセット/新規対戦</a></div>
 				</div>
 				<div style="display: flex;">
-					<div id="getSideInformation" class="settingButton"><a>サイドを見る</a></div>
+					<div class="settingButton"><a>(準備中)</a></div>
 					<div id="drawBottomButton" class="settingButton"><a>デッキ下からドロー</a></div>
 				</div>
 			</div>
