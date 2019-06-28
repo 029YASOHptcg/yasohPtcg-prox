@@ -11,6 +11,8 @@ $(function(){
   var deck = false;
   $("#lost").toggle();
   var lost = false;
+  $("#sideCards").toggle();
+  var sideCards = false;
   //$("#setting").toggle();
   var setting = true;
   $("#settingButton").css('background-color', '#92b0b7');
@@ -64,6 +66,11 @@ $(function(){
 		  $("#settingButton").css('background-color', '#5b6d71');
 		  setting = false;
 	  }
+	  if(sideCards){
+		  $("#sideCards").toggle("blind");
+		  $("#sideButton").css('background-color', '#5b6d71');
+		  sideCards = false;
+	  }
 	  
 	  $("#trash").toggle("blind");
 	  if(!trash){
@@ -90,6 +97,12 @@ $(function(){
 		  $("#setting").toggle("blind");
 		  $("#settingButton").css('background-color', '#5b6d71');
 		  setting = false;
+	  }
+	  if(sideCards){
+		  osouji2();
+		  $("#sideCards").toggle("blind");
+		  $("#sideButton").css('background-color', '#5b6d71');
+		  sideCards = false;
 	  }
 
 	  osouji();
@@ -122,6 +135,12 @@ $(function(){
 		  $("#settingButton").css('background-color', '#5b6d71');
 		  setting = false;
 	  }
+	  if(sideCards){
+		  osouji2();
+		  $("#sideCards").toggle("blind");
+		  $("#sideButton").css('background-color', '#5b6d71');
+		  sideCards = false;
+	  }
 	  
 	  $("#lost").toggle("blind");
 	  if(!lost){
@@ -151,6 +170,12 @@ $(function(){
 		  $("#lostButton").css('background-color', '#5b6d71');
 		  lost = false;
 	  }
+	  if(sideCards){
+		  osouji2();
+		  $("#sideCards").toggle("blind");
+		  $("#sideButton").css('background-color', '#5b6d71');
+		  sideCards = false;
+	  }
 	  
 	  $("#setting").toggle("blind");
 	  if(!setting){
@@ -161,6 +186,42 @@ $(function(){
 		  setting = false;
 	  }  
   });
+  
+  $("#sideButton").click(function(){
+	  if(trash){
+		  $("#trash").toggle("blind");
+		  $("#trashButton").css('background-color', '#5b6d71');
+		  trash = false;
+	  }
+	  if(deck){
+		  osouji();
+		  counter = 0;
+		  $("#deck").toggle("blind");
+		  $("#deckButton").css('background-color', '#5b6d71');
+		  deck = false;
+	  }
+	  if(lost){
+		  $("#lost").toggle("blind");
+		  $("#lostButton").css('background-color', '#5b6d71');
+		  lost = false;
+	  }
+	  if(setting){
+		  $("#setting").toggle("blind");
+		  $("#settingButton").css('background-color', '#5b6d71');
+		  setting = false;
+	  }
+	  
+	  osouji2();
+	  $("#sideCards").toggle("blind");
+	  if(!sideCards){
+		  $("#sideButton").css('background-color', '#92b0b7');
+		  sideCards = true;
+	  }else{
+		  $("#sideButton").css('background-color', '#5b6d71');
+		  sideCards = false;
+	  }  
+  });
+  
   $("#putCardBottomButton").click(function (){
 	  putCardBottom = true;
 	  $("#putCardBottomButton").css('background-color', '#6f332d');
