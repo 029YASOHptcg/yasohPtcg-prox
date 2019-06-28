@@ -2,6 +2,7 @@ var deck = [];
 var subDeck = [];
 var side = [];
 var counter=0;
+var isDroppable=false;
 
 /**
  * デッキのシャッフル
@@ -21,6 +22,19 @@ function osouji(){
 		  deck.push($(element).find("img").attr("src"));
 	});
 	$('#showCardsArea').empty();
+}
+
+function osouji2(){
+	$('#showSideArea p').each(function(index, element){
+		  side.push($(element).find("img").attr("src"));
+	});
+	let Snum = side.length; 
+	$('#numOfSide').html(Snum);
+	$('#showSideArea').empty();
+	if(isDroppable){
+		isDroppable=false;
+		$('#showSideArea').droppable("destroy");
+	}
 }
 
 /**
@@ -200,16 +214,47 @@ $(function(){
 	  }
   });
   
-  $('#getSideInformation').click(function () {
+  $('#showSideButton').click(function () {
 	  if(window.confirm('サイドを見ますか？')){
+		  osouji2();
 		  if(side.length > 0){
-			  $("#sideWindow").empty();
-			  for(i=0; i<=side.length-1; i++){
-				  $('<img src="'+side[i]+'"width="63" height="88">').appendTo('#sideWindow');
+			  let sLength = side.length;
+			  for(a = 0; a <= sLength-1; a++){
+			  	var $srcObj = $('<p style="position: absolute"><img src="'+side[0]+'"width="63" height="88"></p>').appendTo('#showSideArea');
+			  	side.shift();
 			  }
-			  $("#sideWindow").dialog({
-				  modal: true,
+			  $('#showSideArea p').each(function(index, element){
+				  var obj = {};
+				      obj.left = $('#showSideArea').offset().left + (index)*35;
+			  	      obj.top = $('#showSideArea').offset().top;
+			  	      $(element).offset(obj);
 			  });
+			  $('#showSideArea p').draggable({revert: "invalid"});
+			  
+			  $('#showSideArea').droppable({
+			      over: function(e,ui) {
+			        $(this)
+			          .css('background', '#a2e8a0')
+			          .find('#lost p')
+			      },
+			      out: function(e,ui) {
+			        $(this)
+			          .css('background', '#80c47a')
+			          .find('#lost p')
+			      },
+			      drop: function(e,ui) {
+			    	  $(this).css('background', '#80c47a')
+			    	  var $srcObj = $(ui.draggable[0]).appendTo('#showSideArea');
+			    	  $('#showSideArea p').each(function(index, element){
+						  var obj = {};
+						      obj.left = $('#showSideArea').offset().left + (index)*35;
+					  	      obj.top = $('#showSideArea').offset().top;
+					  	      $(element).offset(obj);
+					  });
+			    	  $('#showSideArea p').draggable({revert: "invalid"});
+			      }
+			  });
+			  isDroppable = true;
 		  	}else{
 		  		window.alert('サイドが0枚です');
 		  	}
