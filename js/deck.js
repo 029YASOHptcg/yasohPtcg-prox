@@ -294,4 +294,10 @@ $(function(){
   $('#diceButton').click(function () {
 	  window.alert('サイコロ: '+Math.floor(Math.random()*6+1));
   });
+	
+  $('#countHandButton').click(function () {
+	  let handNum = $('#hand p').length;
+	  let deckNum = deck.length;
+	  window.alert('手札の数は '+handNum+'枚です');
+  });
 });
