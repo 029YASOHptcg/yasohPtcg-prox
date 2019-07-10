@@ -199,13 +199,13 @@ $(function(){
   });
   
   $('#shuffleButton').click(function () {
-	  if(window.confirm('デッキをシャッフルしますか？')){
+	  //if(window.confirm('デッキをシャッフルしますか？')){
 		  if(deck.length > 0){
 			  shuffle();
 		  }else{
 			  window.alert('デッキが0枚です');
 		  }
-	  }
+	  //}
   });
   
   $('#side').click(function () {
@@ -227,7 +227,7 @@ $(function(){
   });
   
   $('#showSideButton').click(function () {
-	  if(window.confirm('サイドを見ますか？')){
+	  //if(window.confirm('サイドを見ますか？')){
 		  osouji2();
 		  if(side.length > 0){
 			  let sLength = side.length;
@@ -270,7 +270,7 @@ $(function(){
 		  	}else{
 		  		window.alert('サイドが0枚です');
 		  	}
-	  }
+	  //}
   });
   
   $('#resetButton').click(function () {
