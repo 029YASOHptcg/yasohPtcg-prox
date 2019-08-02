@@ -287,9 +287,22 @@ body {
   background-color: #558fa8;
 }
 
+#sendToTrash {
+  margin: 0 0 0 27px;
+  width: 68px;
+  height: 82px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  border-style: dashed;
+  border-radius: 3px;
+  color: #bfffbd;
+  background-color: #6cc97d;
+}
+
 #returnToDeckBottom {
-  margin: 0 0 0 73px;
-  width: 82px;
+  margin: 0;
+  width: 68px;
   height: 82px;
   text-align: center;
   font-size: 10px;
@@ -302,7 +315,7 @@ body {
 
 #returnToDeckTop {
   margin: 0 0 0 auto;
-  width: 82px;
+  width: 68px;
   height: 82px;
   text-align: center;
   font-size: 10px;
