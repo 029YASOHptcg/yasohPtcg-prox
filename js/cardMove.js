@@ -461,18 +461,22 @@ $(function(){
   $('#sendToTrash').droppable({
       over: function(e,ui) {
         $(this)
-          .css('background', '#f5c1ca')
+          .css('background', '#99c99e')
           .find('#trash p')
       },
       out: function(e,ui) {
         $(this)
-          .css('background', '#c99da3')
+          .css('background', '#6cc97d')
           .find('#trash p')
       },
       drop: function(e,ui) {
     	  trash = trash + 1;
-    	  $(this).css('background', '#c99da3')
+    	  $(this).css('background', '#6cc97d')
     	  var $srcObj = $(ui.draggable[0]).appendTo('#trash');
+    	  var obj = {};
+	    	obj.left = $('#trash').offset().left+5;
+	    	obj.top = $('#trash').offset().top+145;
+	      $srcObj.offset(obj);
     	  $('#trash p').draggable({
   		    revert: "invalid",
   	      });
