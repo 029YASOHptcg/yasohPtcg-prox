@@ -60,3 +60,6 @@ var deck1 = [
 'https://www.pokemon-card.com/assets/images/card_images/large/SM12a/037473_E_KIHONKAMINARIENERUGI.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/SM12a/037473_E_KIHONKAMINARIENERUGI.jpg'
 ];
+
+$(function(){
+});
