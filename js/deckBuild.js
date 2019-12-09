@@ -53,4 +53,10 @@ $(function(){
 		document.execCommand("Copy");
 		window.alert('クリップボードにコピーしました');
 	});
+	
+	$('#selectButton').click(function(){
+		subDeck = deck1.concat();
+		deck = subDeck.concat(); //リセット用の控え
+		if(deck.length!=0) window.alert('デッキが設定されました');
+	});
 });
