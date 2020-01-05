@@ -2,8 +2,6 @@ var deck1 = [
 'https://www.pokemon-card.com/assets/images/card_images/large/SM12a/037454_P_TOGEPIPIIPUPURINGX.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/SM12a/037454_P_TOGEPIPIIPUPURINGX.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/SM12a/037316_P_PORIGONZ.jpg',
-'https://www.pokemon-card.com/assets/images/card_images/large/SM12a/037316_P_PORIGONZ.jpg',
-'https://www.pokemon-card.com/assets/images/card_images/large/SM12a/037314_P_PORIGON.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/SM12a/037314_P_PORIGON.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/SM12a/037314_P_PORIGON.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/XY6/035806_P_SHIEIMIEX.jpg',
@@ -12,7 +10,8 @@ var deck1 = [
 'https://www.pokemon-card.com/assets/images/card_images/large/XY6/035806_P_SHIEIMIEX.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/SM12a/037443_P_DEDENNEGX.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/S1W/037656_P_ZASHIANV.jpg',
-'https://www.pokemon-card.com/assets/images/card_images/large/S1W/037656_P_ZASHIANV.jpg',
+'https://www.pokemon-card.com/assets/images/card_images/large/BW/037391_P_TAMATAMA.jpg',
+'https://www.pokemon-card.com/assets/images/card_images/large/SMJ/036604_P_KAPUTETEFUGX.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/S1H/037722_T_KUIKKUBORU.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/S1H/037722_T_KUIKKUBORU.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/S1H/037722_T_KUIKKUBORU.jpg',
@@ -31,14 +30,11 @@ var deck1 = [
 'https://www.pokemon-card.com/assets/images/card_images/large/XY/037414_T_TOKINOPAZURU.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/S1H/037723_T_FUSHIGINAAME.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/S1H/037723_T_FUSHIGINAAME.jpg',
-'https://www.pokemon-card.com/assets/images/card_images/large/S1H/037723_T_FUSHIGINAAME.jpg',
-'https://www.pokemon-card.com/assets/images/card_images/large/XY/037412_T_SUPESHARUCHAJI.jpg',
-'https://www.pokemon-card.com/assets/images/card_images/large/SM8b/035574_T_KAUNTAKYACCHA.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/BW9-B/028744_T_POKEMONKAISHUUSAIKURON.jpg',
+'https://www.pokemon-card.com/assets/images/card_images/large/XY/037412_T_SUPESHARUCHAJI.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/SM8b/035591_T_GURAJIO.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/XY/037432_T_SUKAIFIRUDO.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/XY/037432_T_SUKAIFIRUDO.jpg',
-'https://www.pokemon-card.com/assets/images/card_images/large/XY/037432_T_SUKAIFIRUDO.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/SM6b/034921_E_REINBOENERUGI.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/SM6b/034921_E_REINBOENERUGI.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/SM6b/034921_E_REINBOENERUGI.jpg',
@@ -58,7 +54,11 @@ var deck1 = [
 'https://www.pokemon-card.com/assets/images/card_images/large/XY/033850_E_WANDAENERUGI.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/XY/033850_E_WANDAENERUGI.jpg',
 'https://www.pokemon-card.com/assets/images/card_images/large/XY/033850_E_WANDAENERUGI.jpg',
-'https://www.pokemon-card.com/assets/images/card_images/large/XY/033850_E_WANDAENERUGI.jpg'
+'https://www.pokemon-card.com/assets/images/card_images/large/XY/033850_E_WANDAENERUGI.jpg',
+'https://www.pokemon-card.com/assets/images/card_images/large/SM11a/036964_E_DOROENERUGI.jpg',
+'https://www.pokemon-card.com/assets/images/card_images/large/SM11a/036964_E_DOROENERUGI.jpg',
+'https://www.pokemon-card.com/assets/images/card_images/large/SM11a/036964_E_DOROENERUGI.jpg',
+'https://www.pokemon-card.com/assets/images/card_images/large/SM11a/036964_E_DOROENERUGI.jpg'
 ];
 
 $(function(){
